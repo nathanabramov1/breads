@@ -11,6 +11,11 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
+// MIDDLEWARE
+app.use(express.urlencoded({extended: true}))
+// NEW
+
+
 // ROUTES
 app.get('/', (req, res) => {
   res.send('Welcome to an Awesome App about Breads!')
@@ -28,3 +33,4 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
 })
+  
