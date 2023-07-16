@@ -7,6 +7,7 @@ function Show ({bread, index}) {
       return (
         <Default>
   <h3>{bread.name}</h3>
+  <a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
   <p>
     and it
     {
@@ -24,7 +25,7 @@ function Show ({bread, index}) {
   </form>
 
   <li><a href="/breads">Go home</a></li>
-  <a href={`/breads/${index}/edit`}><button>Edit</button></a>
+  
 
 </Default>
       )
